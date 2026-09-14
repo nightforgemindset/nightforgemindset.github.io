@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Un Simple Jeu — Et l'addiction devient ton esclave</title>
+<style>
+  :root {
+    --bg: #0a0908;
+    --bg-soft: #131110;
+    --gold: #c9a86a;
+    --gold-bright: #e8c887;
+    --cream: #f2ede2;
+    --grey: #a89f8f;
+    --line: #2a2622;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: 'Georgia', 'Iowan Old Style', serif;
+    line-height: 1.65;
+  }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  /* HERO */
+  .hero {
+    min-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 24px;
+    background:
+      radial-gradient(circle at 50% 30%, rgba(201,168,106,0.08), transparent 60%),
+      var(--bg);
+  }
+
+  .hero img {
+    max-width: 100%;
+    width: 620px;
+    border-radius: 4px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+    margin-bottom: 48px;
+  }
+
+  .hero .kicker {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0.12em;
+    font-size: 13px;
+    color: var(--gold);
+    margin-bottom: 18px;
+  }
+
+  .hero h1 {
+    font-size: clamp(30px, 6vw, 46px);
+    font-weight: 400;
+    color: var(--gold-bright);
+    letter-spacing: 0.01em;
+  }
+
+  .hero .sub {
+    font-size: clamp(16px, 3vw, 19px);
+    color: var(--grey);
+    margin-top: 14px;
+    font-style: italic;
+  }
+
+  .hero .cta-top {
+    margin-top: 40px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* SECTIONS */
+  section { padding: 70px 0; border-top: 1px solid var(--line); }
+
+  h2 {
+    font-size: clamp(22px, 4vw, 28px);
+    font-weight: 400;
+    color: var(--gold-bright);
+    margin-bottom: 22px;
+    line-height: 1.3;
+  }
+
+  p { color: var(--cream); font-size: 17px; margin-bottom: 16px; }
+
+  .lede {
+    font-size: clamp(19px, 3.4vw, 23px);
+    color: var(--gold-bright);
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  strong { color: var(--gold-bright); font-weight: 600; }
+
+  .contents {
+    list-style: none;
+    margin-top: 24px;
+  }
+
+  .contents li {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--cream);
+    font-size: 17px;
+    display: flex;
+    gap: 14px;
+  }
+
+  .contents li::before {
+    content: "—";
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .stat-line {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--grey);
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    margin-top: 30px;
+  }
+
+  /* BUY BLOCK */
+  .buy {
+    text-align: center;
+    padding: 90px 0 100px;
+  }
+
+  .buy .price {
+    font-size: 56px;
+    color: var(--gold-bright);
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+
+  .buy .price-note {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--grey);
+    font-size: 14px;
+    margin-bottom: 36px;
+  }
+
+  .btn-buy {
+    display: inline-block;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: var(--gold-bright);
+    color: #16130f;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 18px 44px;
+    border-radius: 3px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .btn-buy:hover { background: #f2d9a0; transform: translateY(-1px); }
+
+  .guarantee {
+    margin-top: 22px;
+    color: var(--grey);
+    font-size: 14px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  footer {
+    text-align: center;
+    padding: 40px 24px 60px;
+    color: var(--grey);
+    font-size: 13px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    border-top: 1px solid var(--line);
+  }
+
+  @media (max-width: 600px) {
+    .hero { min-height: auto; padding: 50px 20px; }
+    section { padding: 50px 0; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <img src="couverture.png" alt="Couverture du livre Un Simple Jeu">
+    <div class="kicker">MÉTHODE · 90 JOURS · GAMIFICATION</div>
+    <h1>Un Simple Jeu</h1>
+    <p class="sub">Et l'addiction devient ton esclave</p>
+    <div class="cta-top">
+      <a href="#acheter" class="btn-buy" style="text-decoration:none;">Je commence le jeu — 12,90 €</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <section>
+      <p class="lede">Tu as déjà essayé d'arrêter. Une fois. Dix fois. Peut-être plus.</p>
+      <p>Et à chaque fois, la même histoire : un élan de motivation, quelques jours de victoire, puis la rechute — suivie d'un sentiment d'échec qui rend la prochaine tentative encore plus difficile.</p>
+      <p><strong>Ce n'est pas un manque de volonté. C'est une méthode.</strong></p>
+      <p>Ton addiction — écrans, tabac, sucre, jeu d'argent — n'est pas un défaut de caractère. C'est un mécanisme biologique précis, vieux de 200 000 ans, détourné par des stimuli modernes conçus pour l'exploiter. Une fois que tu comprends ce mécanisme, il perd une grande partie de son pouvoir sur toi.</p>
+    </section>
+
+    <section>
+      <h2>La méthode : retourner le jeu contre lui-même</h2>
+      <p>Ce livre s'appuie sur la gamification — les mêmes mécanismes cérébraux (points, niveaux, récompenses, séries) qui rendent les réseaux sociaux et les jeux d'argent addictifs. Sauf qu'ici, c'est toi qui choisis l'objectif, pas le produit.</p>
+      <p>Des applications comme Duolingo ou Zero utilisent déjà ce principe à grande échelle, avec des taux de réussite largement supérieurs aux méthodes basées sur la seule volonté.</p>
+    </section>
+
+    <section>
+      <h2>Ce que tu vas trouver à l'intérieur</h2>
+      <ul class="contents">
+        <li>Le mécanisme exact de ton addiction expliqué simplement (neurosciences, psychologie)</li>
+        <li>Comment construire TON jeu personnel, adapté à ta situation</li>
+        <li>Des chapitres appliqués : écrans & réseaux sociaux, tabac, sucre, jeu d'argent</li>
+        <li>Un programme progressif complet sur 90 jours, avec fiches de suivi prêtes à l'emploi</li>
+        <li>Comment transformer une rechute en simple « partie perdue » — jamais en abandon</li>
+        <li>10 mythes sur l'addiction déconstruits par la science</li>
+      </ul>
+      <p class="stat-line">55 PAGES · FORMAT PDF · LIVRAISON IMMÉDIATE</p>
+    </section>
+
+    <section class="buy" id="acheter">
+      <div class="price">12,90 €</div>
+      <div class="price-note">Livré en PDF — accès immédiat après paiement</div>
+
+      <!-- Formulaire PayPal : remplace TON_EMAIL_PAYPAL par ton adresse email PayPal -->
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="TON_EMAIL_PAYPAL">
+        <input type="hidden" name="item_name" value="Un Simple Jeu - Ebook">
+        <input type="hidden" name="amount" value="12.90">
+        <input type="hidden" name="currency_code" value="EUR">
+        <input type="hidden" name="return" value="https://nightforgemindset.github.io/merci.html">
+        <input type="hidden" name="cancel_return" value="https://nightforgemindset.github.io/">
+        <button type="submit" class="btn-buy">Je commence le jeu</button>
+      </form>
+
+      <div class="guarantee">Paiement sécurisé par PayPal — compte PayPal ou carte bancaire</div>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2026 Nightforge — Un Simple Jeu
+  </footer>
+
+</body>
+</html>
