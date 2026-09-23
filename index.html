@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Un Simple Jeu — Et l'addiction devient ton esclave</title>
+<link rel="icon" type="image/png" href="couverture.png">
+
+<!-- Partage sur réseaux sociaux / WhatsApp -->
+<meta property="og:title" content="Un Simple Jeu — Et l'addiction devient ton esclave">
+<meta property="og:description" content="La méthode en 90 jours pour retourner la gamification contre tes addictions. Écrans, tabac, sucre, jeu d'argent.">
+<meta property="og:image" content="https://nightforgemindset.github.io/couverture.png">
+<meta property="og:url" content="https://nightforgemindset.github.io/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Un Simple Jeu : la méthode en 90 jours pour vaincre tes addictions grâce à la gamification. Ebook PDF, 55 pages, livraison immédiate.">
+
 <style>
   :root {
     --bg: #0a0908;
@@ -191,6 +202,54 @@
     font-family: 'Helvetica Neue', Arial, sans-serif;
   }
 
+  .faq {
+    padding: 70px 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+    padding: 20px 0;
+  }
+
+  .faq-item summary {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--gold-bright);
+    font-size: 17px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-item summary::-webkit-details-marker { display: none; }
+
+  .faq-item summary::after {
+    content: "+";
+    color: var(--gold);
+    font-size: 22px;
+    margin-left: 12px;
+  }
+
+  .faq-item[open] summary::after { content: "–"; }
+
+  .faq-item p {
+    margin-top: 14px;
+    color: var(--grey);
+    font-size: 15px;
+  }
+
+  .secure-badge {
+    margin-top: 16px;
+    color: var(--grey);
+    font-size: 13px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
   footer {
     text-align: center;
     padding: 40px 24px 60px;
@@ -261,6 +320,30 @@
       <p class="visual-caption">Jour 1 : le réveil. Jour 90 : la maîtrise. Chaque marche du programme est balisée — tu ne montes jamais à l'aveugle.</p>
     </section>
 
+    <section class="faq">
+      <h2>Questions fréquentes</h2>
+
+      <details class="faq-item">
+        <summary>Dois-je avoir un compte PayPal pour payer ?</summary>
+        <p>Non. Tu peux payer directement par carte bancaire (Visa, Mastercard, Amex) sans créer de compte. Sur la page de paiement, choisis "Créer un compte" puis "Payer par carte de débit ou de crédit" — aucune inscription n'est nécessaire pour finaliser l'achat.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Comment est-ce que je reçois le livre ?</summary>
+        <p>Immédiatement après le paiement, tu es redirigé vers une page de téléchargement où tu peux récupérer le PDF. Garde bien cette page ou le lien reçu.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>C'est bien en français ?</summary>
+        <p>Oui, l'ebook complet (55 pages) est rédigé entièrement en français.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Et si le livre ne me convient pas ?</summary>
+        <p>Contacte-moi par email dans les 7 jours suivant ton achat, et tu seras remboursé sans question.</p>
+      </details>
+    </section>
+
     <section class="buy" id="acheter">
       <div class="price">8 €</div>
       <div class="price-note">Livré en PDF — accès immédiat après paiement</div>
@@ -277,7 +360,8 @@
         <button type="submit" class="btn-buy">Je commence le jeu</button>
       </form>
 
-      <div class="guarantee">Paiement sécurisé par PayPal — compte PayPal ou carte bancaire</div>
+      <div class="guarantee">Satisfait ou remboursé sous 7 jours — sans question</div>
+      <div class="secure-badge">🔒 Paiement 100% sécurisé — compte PayPal ou carte bancaire, sans inscription obligatoire</div>
     </section>
 
   </div>
