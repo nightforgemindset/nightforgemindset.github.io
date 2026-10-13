@@ -239,6 +239,41 @@
     font-size: 15px;
   }
 
+  .story {
+    border-left: 2px solid var(--gold);
+    padding-left: 24px;
+  }
+
+  .story .signature {
+    margin-top: 20px;
+    color: var(--gold-bright);
+    font-style: italic;
+  }
+
+  .launch-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 10px 20px;
+    margin: 20px auto 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    color: var(--cream);
+  }
+
+  .launch-badge .old-price {
+    text-decoration: line-through;
+    color: var(--grey);
+  }
+
+  .launch-badge .new-price {
+    color: var(--gold-bright);
+    font-weight: 700;
+  }
+
   .secure-badge {
     margin-top: 16px;
     color: var(--grey);
@@ -273,8 +308,9 @@
     <h1>Un Simple Jeu</h1>
     <p class="sub">Et l'addiction devient ton esclave</p>
     <div class="cta-top">
-      <a href="#acheter" class="btn-buy" style="text-decoration:none;">Je commence le jeu — 8 €</a>
+      <a href="#acheter" class="btn-buy" style="text-decoration:none;">Je commence le jeu — 1 €</a>
     </div>
+    <div class="launch-badge">Prix de lancement : <span class="old-price">12 €</span> <span class="new-price">8 €</span> — jusqu'au 24 octobre 2026</div>
   </div>
 
   <div class="wrap">
@@ -289,6 +325,14 @@
     <section class="visual-section">
       <img src="visuel-tentation.jpg" alt="Pomme dorée et lèvres sur un piédestal, symbole de la tentation" class="feature-img">
       <p class="visual-caption">Pomme, serpent, clé, désir — les symboles de la tentation n'ont pas changé depuis toujours. Seul le piège a changé de forme.</p>
+    </section>
+
+    <section class="story">
+      <h2>Pourquoi j'ai écrit ce livre</h2>
+      <p>La plupart des gens abordent leur addiction comme un combat de volonté. C'est une erreur de raisonnement — et c'est précisément pour ça qu'ils perdent.</p>
+      <p>En observant ce schéma se répéter, encore et encore, chez des profils pourtant très différents, un constat s'est imposé : ce n'est pas la discipline qui manque. C'est la structure. Un cerveau ne résiste pas à un vide — il résiste à un système mal conçu. Donnez-lui un système cohérent, mesurable, déjà éprouvé, et il cesse de se battre contre lui-même pour commencer à jouer selon des règles qu'il peut enfin maîtriser.</p>
+      <p>Ce livre n'est rien d'autre que ce système. Pas un discours de motivation. Un mécanisme.</p>
+      <p class="signature">— Nightforge</p>
     </section>
 
     <section>
@@ -345,7 +389,7 @@
     </section>
 
     <section class="buy" id="acheter">
-      <div class="price">8 €</div>
+      <div class="price">1 €</div>
       <div class="price-note">Livré en PDF — accès immédiat après paiement</div>
 
       <!-- Formulaire PayPal : remplace TON_EMAIL_PAYPAL par ton adresse email PayPal -->
@@ -353,7 +397,7 @@
         <input type="hidden" name="cmd" value="_xclick">
         <input type="hidden" name="business" value="ajimerioken@gmail.com">
         <input type="hidden" name="item_name" value="Un Simple Jeu - Ebook">
-        <input type="hidden" name="amount" value="8.00">
+        <input type="hidden" name="amount" value="1.00">
         <input type="hidden" name="currency_code" value="EUR">
         <input type="hidden" name="return" value="https://nightforgemindset.github.io/merci.html">
         <input type="hidden" name="cancel_return" value="https://nightforgemindset.github.io/">
@@ -361,7 +405,7 @@
       </form>
 
       <div class="guarantee">Satisfait ou remboursé sous 7 jours — sans question</div>
-      <div class="secure-badge">🔒 Paiement 100% sécurisé — compte PayPal ou carte bancaire, sans inscription obligatoire</div>
+      <div class="secure-badge">🔒 Paiement 100% sécurisé. Pas de compte PayPal ? Sur la page suivante, clique sur « Créer un compte », puis choisis « Payer par carte de débit ou de crédit » — tu peux payer directement avec ta carte, sans créer de compte ni rien d'autre.</div>
     </section>
 
   </div>
